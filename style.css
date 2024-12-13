@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif; /* Apply Roboto to the whole body */
+}
+
+/* Header styling */
+header {
+    background-color: #0A1931;
+    padding: 15px 150px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* About section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #185ADB, #D4AF37);
+}
+
+/* Circle Shapes */
+.about::before, .about::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    border-radius: 50%;
+    animation: move 5s infinite;
+}
+
+.about::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+
+.about::after {
+    width: 250px;
+    height: 250px;
+    bottom: -100px;
+    right: -100px;
+}
+
+/* Square Shape */
+.square {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    top: 150px;
+    right: 100px;
+    transform: rotate(45deg);
+    animation: pulse 4s infinite;
+}
+
+/* Image and Description */
+.about img {
+    width: 400px;
+    height: 400px;
+    margin-right: 200px;
+    object-fit: cover;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.about-description h1 {
+    font-size: 36px;
+    color: #EFEFEF;
+    margin-bottom: 10px;
+}
+
+.about-description p {
+    font-size: 18px;
+    color: #EFEFEF;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Hire Me Button */
+.hire-btn {
+    background-color: #FFC947;
+    color: #0A1931;
+    padding: 12px 40px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin: 0 100px 0 300px;
+}
+
+.hire-btn:hover {
+    background-color: #FFD54F;
+}
+
+
+
+
+/* Skills Section */
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /* Ensure it covers the full screen height */
+   padding: 1rem; /* Reduced padding for shorter boxes */
+    background: linear-gradient(145deg, #FFD54F, #FFC947);
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.skills-container {
+    max-width: 60rem; /* Using rem for max width */
+    text-align: center;
+    width: 100%; /* Ensure container takes full width up to the max */
+ 
+}
+
+.skills-container h2 {
+    font-size: 2.25rem; /* Using rem for font size */
+    color: #0A1931;
+    margin-bottom: 1.875rem; /* 30px to rem */
+    margin-top: 6.0rem;
+}
+
+.skills-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem; /* Reduced gap between skill boxes */
+    width: 100%;
+}
+
+/* Skill Box */
+.skill-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0.625rem; /* 10px to rem */
+    padding: 1rem; /* Reduced padding for better layout */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.25rem; /* Add space between each skill box */
+    height: auto; /* Adjust box height based on content */
+}
+
+.skill-box:hover {
+    transform: translateY(-0.3125rem); /* 5px to rem */
+    box-shadow: 0 0.375rem 0.625rem rgba(0, 0, 0, 0.15);
+}
+
+.skill-box h3 {
+    font-size: 1.5rem; /* 24px to rem */
+    color: #185ADB;
+    margin-bottom: 0.9375rem; /* 15px to rem */
+}
+
+.skill-box p {
+    font-size: .80rem; /* 16px to rem */
+    color: #333;
+    margin-bottom: 0.625rem; /* 10px to rem */
+    line-height: 1.5;
+}
+
+.skill-box .tech-icons {
+    margin-top: 0.625rem; /* 10px to rem */
+    display: flex;
+    gap: 0.625rem; /* 10px to rem */
+}
+
+.skill-box .tech-icons img {
+    width: 1.875rem; /* 30px to rem */
+    height: 1.875rem; /* 30px to rem */
+    object-fit: contain;
+}
+
+.skill-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.625rem; /* 10px to rem */
+    margin-bottom: 0.9375rem; /* 15px to rem */
+}
+
+
+
+
+
+
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Keyframe Animations */
+@keyframes move {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-description {
+        align-items: center;
+    }
+}
+
+
+/* Skills Responsive Design */
+@media (max-width: 768px) {
+    .skills-column {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .skills-container h2 {
+        font-size: 1.875rem; /* Reduce font size for smaller screens */
+    }
+
+    .skill-box {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container h2 {
+        font-size: 1.5rem; /* Further reduce font size for very small screens */
+    }
+
+    .skill-box {
+        padding: 0.75rem; /* Further reduce padding */
+    }
+
+    .skill-box h3 {
+        font-size: 1.25rem; /* Smaller headings */
+    }
+
+    .skill-box p {
+        font-size: 0.875rem; /* Smaller text */
+    }
+
+    .skill-box .tech-icons img {
+        width: 1.5rem; /* Smaller icons */
+        height: 1.5rem; /* Smaller icons */
+    }
+}
+
+
