@@ -246,9 +246,437 @@ header {
 }
 
 
+/* Training Section Styles */
+.training {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    height: 100vh; /* Cover the full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.training-container {
+    width: 90%; /* Make container width responsive */
+    max-width: 1200px; /* Limit max width for large screens */
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #0a1931;
+}
+
+/* Display the selected year */
+.selected-year {
+    font-size: 10px;
+    
+
+    color: #0a1931;
+    margin-bottom: 1.5rem;
+}
+
+/* Slider controls */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.slider-controls button {
+    background-color: #0a1931;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+    background-color: #185adb;
+}
+
+.training {
+    padding: 2rem;
+    background-color: #f7f7f7;
+}
+
+.training-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.selected-year {
+    font-size: 1.2rem;
+    color: #0A1931;
+    margin-bottom: 1.5rem;
+}
+
+.slider-controls {
+    margin-bottom: 2rem;
+}
+
+.slider-controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #185ADB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-controls button:hover {
+    background-color: #0a3c7b;
+}
+
+.training-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.training-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.training-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.training-card h3 {
+    font-size: 1.5rem;
+    color: #185ADB;
+    margin-bottom: 10px;
+}
+
+.training-card .month {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.training-card p {
+    font-size: 1rem;
+    color: #333;
+}
 
 
 
+/* For small screens (mobile view) */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .slider-controls button {
+        padding: 0.5rem 1rem;
+    }
+
+    .training-card {
+        padding: 1rem;
+    }
+}
+
+/* Projects Section Styles */
+.projects {
+    background-color: #f9f9f9;
+    padding: 6rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh; /* Ensure section takes full viewport height */
+    box-sizing: border-box; /* Include padding in total height calculation */
+}
+
+.projects-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #0a1931;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    flex: 1;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #185ADB;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-card .view-project {
+    text-decoration: none;
+    color: #fff;
+    background-color: #185ADB;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .view-project:hover {
+    background-color: #0a3c7b;
+}
+
+.slider-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #185ADB;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.slider-button:hover {
+    color: #0a3c7b;
+}
+
+.side-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#prev-project {
+    left: -3rem;
+}
+
+#next-project {
+    right: -3rem;
+}
+
+
+
+
+
+/* Services Section Styles */
+.services {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.services-container {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #0a1931;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Center services horizontally */
+    align-items: stretch; /* Ensure cards are consistent in height */
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width for consistent card size */
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px; /* Ensure consistent image size */
+    object-fit: cover; /* Maintain image proportions */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #185ADB;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Push the button down */
+}
+
+.service-card .service-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #185ADB;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.service-card .service-btn:hover {
+    background-color: #0a3c7b;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #f9f9f9;
+    padding: 6rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #0a1931;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact form button {
+    background-color: #185ADB;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #0a3c7b;
+}
+
+#form-response {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: green;
+}
 
 
 /* Footer styling */
@@ -323,3 +751,17 @@ footer {
 }
 
 
+/* For Trainings Responsive (mobile view) */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .slider-controls button {
+        padding: 0.5rem 1rem;
+    }
+
+    .training-card {
+        padding: 1rem;
+    }
+}

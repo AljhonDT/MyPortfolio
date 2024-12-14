@@ -77,12 +77,88 @@
           </div>
         </div>
     </div>
+
+
 </section>
+
+
+
+<section class="training" id="trainings">
+    <div class="training-container">
+        <h2>Training </h2>
+        
+        <!-- Display the selected year -->
+        <div id="selected-year" class="selected-year">Training Roadmap for 2024</div>
+
+        <!-- Slider controls -->
+        <div class="slider-controls">
+            <button id="prev-year">Previous Year</button>
+            <button id="next-year">Next Year</button>
+        </div>
+
+        <div id="training-roadmap" class="training-column">
+            <!-- Training cards will be dynamically added here -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="projects" class="projects">
+    <div class="projects-container">
+        <h2>Projects</h2>
+        <p>Here are some of the projects I have worked on, showcasing my skills and expertise in web development and data analytics.</p>
+
+        <div class="slider-wrapper">
+            <button id="prev-project" class="slider-button side-button">❮</button>
+            <div id="projects-slider" class="projects-grid">
+                <!-- Projects will be dynamically populated here -->
+            </div>
+            <button id="next-project" class="slider-button side-button">❯</button>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="services-container">
+        <h2>My Services</h2>
+        <p>Explore the range of services I offer, designed to help you with your web development and data analytics needs.</p>
+
+        <!-- Services Grid (this will be populated by JavaScript) -->
+        <div id="services-grid" class="services-grid"></div>
+    </div>
+</section>
+
+
+
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out using the form below!</p>
+        <form id="contact-form" action="https://formspree.io/f/mrbgvneo" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="send-btn">Send</button>
+        </form>
+        <p id="form-response"></p>
+    </div>
+</section>
+
+
+
+
 
     <!-- Footer -->
     <footer>
         <p>Copyright © 2024 Aljhon O. Dela Torre. All rights reserved.</p>
     </footer>
+   
+     <script src="script.js"></script>
+     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
 
