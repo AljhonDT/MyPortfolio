@@ -7,23 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="navbar">
+        <nav class="navbar">
             <!-- Logo -->
-            <div class="logo">AlDan solutions.</div>
-            
-            <!-- Navbar Links -->
-            <ul>
-                <li><a href="#home">About</a></li>
-                <li><a href="#skills">My Skills</a></li>
-                <li><a href="#trainings">Trainings</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="logo">AlDan Solutions</div>
+    
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul id="nav-links">
+                <li><a href="#home" data-link="home">About</a></li>
+                <li><a href="#skills" data-link="skills">My Skills</a></li>
+                <li><a href="#trainings" data-link="trainings">Trainings</a></li>
+                <li><a href="#projects" data-link="projects">Projects</a></li>
+                <li><a href="#services" data-link="services">Services</a></li>
+                <li><a href="#contact" data-link="contact">Contact</a></li>
             </ul>
-        </div>
     </header>
+    
 
     <!-- About Section -->
     <section id="home" class="about">
@@ -154,8 +160,26 @@
 
     <!-- Footer -->
     <footer>
-        <p>Copyright © 2024 Aljhon O. Dela Torre. All rights reserved.</p>
+        <div class="footer-container">
+            <p>Copyright © 2024 Aljhon O. Dela Torre. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/aljhon.delatorre.37" target="_blank" aria-label="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Icon">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon">
+                </a>
+                </a>
+                <a href="www.linkedin.com/in/aljhondelatorre" target="_blank" aria-label="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon">
+                </a>
+                <a href="https://github.com/AljhonDT" target="_blank" aria-label="GitHub">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon">
+                </a>
+            </div>
+        </div>
     </footer>
+    
    
      <script src="script.js"></script>
      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>

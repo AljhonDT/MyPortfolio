@@ -1,3 +1,37 @@
+// Navbar
+
+ // Select all section elements and navbar links
+ const sections = document.querySelectorAll("section");
+ const navLinks = document.querySelectorAll(".navbar ul li a");
+
+ // Highlight the navbar link corresponding to the visible section
+ const highlightNav = () => {
+     let currentSection = "";
+
+     // Get the section currently in the viewport
+     sections.forEach((section) => {
+         const sectionTop = section.offsetTop;
+         const sectionHeight = section.offsetHeight;
+         if (window.scrollY >= sectionTop - sectionHeight / 4) {
+             currentSection = section.getAttribute("id");
+         }
+     });
+
+     // Remove active class from all links and add it to the current link
+     navLinks.forEach((link) => {
+         link.classList.remove("active");
+         if (link.dataset.link === currentSection) {
+             link.classList.add("active");
+         }
+     });
+ };
+
+ // Attach the function to the scroll event
+ window.addEventListener("scroll", highlightNav);
+    
+
+
+
 // Training data for each year
 const trainingData = {
     2021: [

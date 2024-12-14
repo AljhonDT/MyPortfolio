@@ -15,11 +15,16 @@ header {
     box-sizing: border-box;
 }
 
-/* Navbar container */
+/* General Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    background-color: #0a1931;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar .logo {
@@ -28,15 +33,13 @@ header {
     font-weight: bold;
 }
 
+/* Navigation Links */
 .navbar ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.navbar ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 .navbar ul li a {
@@ -50,6 +53,30 @@ header {
     background-color: #555;
     border-radius: 4px;
 }
+
+/* Hamburger Menu Styles (Hidden by Default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Highlight for active section */
+.navbar ul li a.active {
+    color: #185ADB; /* Highlight color */
+    font-weight: bold;
+    background-color: #f0f0f0; /* Optional background for the active link */
+    border-radius: 4px;
+}
+
+
 
 /* About section */
 .about {
@@ -679,13 +706,73 @@ p {
 }
 
 
-/* Footer styling */
+/* Footer Section */
 footer {
-    background-color: #333;
+    background-color: #0a1931;
     color: #fff;
+    padding: 2rem 1rem;
     text-align: center;
-    padding: 10px 0;
 }
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hide nav links and show hamburger menu */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #0a1931;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
 
 /* Keyframe Animations */
 @keyframes move {
